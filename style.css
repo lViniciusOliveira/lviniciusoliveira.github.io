@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+*,
+ *, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+ :root {
+   font-size: 10.5px;
+   user-select: none;
+   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+ body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+ .container {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40rem;
+   width: 40rem;
+}
+ .container::before {
+   position: absolute;
+   text-align: center;
+   content: "";
+   color: #transparent;
+   top: 2rem;
+   font-size: 1.5rem;
+   white-space: nowrap;
+   z-index: 10;
+   text-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+ .frame {
+   color: rgba(252, 69, 2, 0.884);
+   background: rgba(218, 214, 214, 0.788);
+   border-bottom: 0.1rem solid white;  
+   position: relative;
+   width: 40rem;
+   height: 40rem;
+   border-radius: 3rem;
+}
+/* cor do fundo quadrado */
+ .frame .profile {
+   position: relative;
+   width: 17.5rem;
+   height: 32rem;
+   background: coral;
+   border-radius: 1rem;
+   left: 2.5rem;
+   top: 5rem;
+   background: #3B0B39;
+   /* fim do codigo da cor do fundo quadrado */
+}
+ .frame .profile .image {
+   position: relative;
+   top: 2.5rem;
+   left: 5rem;
+}
+ .frame .profile .image:hover > .circle-1 {
+   transition: all 1s ease-in-out;
+   transform: rotate(180deg);
+}
+ .frame .profile .image:hover > .circle-2 {
+   transition: all 1s ease-in-out;
+   transform: rotate(-180deg);
+}
+ .frame .profile .image:hover > .circle-3 {
+   transition: all 1s ease-in-out;
+   transform: rotate(360deg);
+}
+ .frame .profile .image__name {
+   position: absolute;
+   margin-top: 2rem;
+   text-transform: uppercase;
+   font-weight: 500;
+   font-size: 3rem;
+   left: -1.5rem;
+   color: #ebe4e4;
+}
+ .frame .profile .image__profession {
+   position: absolute;
+   line-height: 6rem;
+   margin-top: 3.5rem;
+   font-size: 2.2rem;
+   left: -.8rem;
+   color: #ebe4e4;
+}
+ .frame .profile .image .circle {
+   position: absolute;
+   border-radius: 50%;
+   border-width: 0.2rem;
+   border-style: solid;
+   border-color: #ebe4e4 transparent #ebe4e4 transparent;
+   width: 9rem;
+   height: 9rem;
+   background: none;
+   top: -0.8rem;
+   left: -0.8rem;
+}
+ .frame .profile .image .circle.circle-2 {
+   width: 10rem;
+   height: 10rem;
+   border-color: transparent #ebe4e4 transparent #ebe4e4;
+   top: -1.3rem;
+   left: -1.3rem;
+}
+ .frame .profile .image .circle.circle-3 {
+   width: 11rem;
+   height: 11rem;
+   border-color: #ebe4e4 transparent #ebe4e4 transparent;
+   top: -1.7rem;
+   left: -1.7rem;
+}
+ .frame .profile .image img {
+   border-radius: 50%;
+}
+ .frame .profile .action__button {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   top: 13rem;
+   font-size: 1.2rem;
+}
+ .frame .profile .action__button .like, .frame .profile .action__button .follow, .frame .profile .action__button .message {
+   padding: 0.5rem 2rem;
+   margin-bottom: 0.5rem;
+   border: 0.1rem solid rgba(252, 69, 2, 0.884);
+   border-radius: 1rem;
+   color: #3B0B39;
+   font-family: "Montserrat", sans-serif;
+   cursor: pointer;
+}
+ .frame .profile .action__button .like:hover, .frame .profile .action__button .follow:hover, .frame .profile .action__button .message:hover {
+   border-top: 0.3rem solid rgba(252, 69, 2, 0.884);
+   border-left: 0.3rem solid rgba(252, 69, 2, 0.884);
+   font-weight: 800;
+   transform: rotate(-10deg);
+}
+ .frame .statistic {
+   position: absolute;
+   width: 15.5rem;
+   height: 32rem;
+   border-radius: 1rem;
+   left: 21.5rem;
+   top: 5rem;
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 0.3rem;
+}
+/* cor do quadrado do lado direito */
+ .frame .statistic .posts, .frame .statistic .likes, .frame .statistic .follower {
+   flex-grow: 1;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: coral;
+   border-radius: 1rem;
+   flex-direction: column;
+   cursor: pointer;
+   color: #ebe4e4;
+   letter-spacing: 0.1rem;
+   font-size: 2.5rem;
+   background: #3B0B39;
+}
+/* fim do codigo da cor do quadrado do lado direito */
+ .frame .statistic .posts:hover, .frame .statistic .likes:hover, .frame .statistic .follower:hover {
+   color: rgba(252, 69, 2, 0.884);
+   background: #000000;
+   border-bottom: 0.1rem solid white;
+}
+ .frame .statistic .posts .stat-number, .frame .statistic .likes .stat-number, .frame .statistic .follower .stat-number {
+   font-size: 2.0rem;
+   font-weight: 600;
+   color: #ebe4e4;
+}
+ .frame .statistic .follower {
+   border-bottom: none;
+}
+ 
+
+body {
+  background-image: url('https://i.imgur.com/obWs6qP.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ 
